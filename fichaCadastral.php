@@ -11,20 +11,19 @@ $habilidades = ['PHP', 'HTML', 'CSS', 'Java'];
 define('IDADE_APOSENTADORIA_MASCULINA', 65);
 define('IDADE_APOSENTADORIA_FEMININA', 62);
 
+
+// if()... else()...
+//()?... : ...
+
+
 $situaçãoEmprego = null;
+$situaçãoEmprego = $esta_empregado == true ? 'Empregado' : 'Desempregado';
 
-if ($esta_empregado == true) {
-            $situaçãoEmprego = 'Empregado';
-         } else {
-            $situaçãoEmprego = 'Desempregado';
-         }
+//Ternário:
+//variável = condição ? valor_se_atender_condição : valor_se_não_atender_condição
 
-$total_para_aposentar = null;
-            if ($sexo == 'M') {
-                $total_para_aposentar = IDADE_APOSENTADORIA_MASCULINA;
-            } else{
-                $total_para_aposentar = IDADE_APOSENTADORIA_FEMININA;
-            }
+$total_para_aposentar = $sexo == 'M' ? IDADE_APOSENTADORIA_MASCULINA : IDADE_APOSENTADORIA_FEMININA;
+            
             
         
 ?>
