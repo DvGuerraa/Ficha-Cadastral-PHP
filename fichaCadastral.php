@@ -6,6 +6,11 @@ $salário_mensal = 1500.00;
 $esta_empregado = true;
 $habilidades = ['PHP', 'HTML', 'CSS', 'Java'];
 
+//Criando uma constante
+
+define('IDADE_APOSENTADORIA_MASCULINA', 65);
+define('IDADE_APOSENTADORIA_FEMININA', 62);
+
 $situaçãoEmprego = null;
 
 if ($esta_empregado == true) {
@@ -16,9 +21,9 @@ if ($esta_empregado == true) {
 
 $total_para_aposentar = null;
             if ($sexo == 'M') {
-                $total_para_aposentar = 65;
+                $total_para_aposentar = IDADE_APOSENTADORIA_MASCULINA;
             } else{
-                $total_para_aposentar = 62;
+                $total_para_aposentar = IDADE_APOSENTADORIA_FEMININA;
             }
             
         
