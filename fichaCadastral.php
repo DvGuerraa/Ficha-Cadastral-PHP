@@ -1,31 +1,7 @@
 <?php
-$nome = "Davi";
-$idade = "18";
-$sexo = "M";
-$salário_mensal = 1500.00;
-$esta_empregado = true;
-$habilidades = ['PHP', 'HTML', 'CSS', 'Java'];
+require 'constantes.php';
+include 'data.php';
 
-//Criando uma constante
-
-define('IDADE_APOSENTADORIA_MASCULINA', 65);
-define('IDADE_APOSENTADORIA_FEMININA', 62);
-
-
-// if()... else()...
-//()?... : ...
-
-
-$situaçãoEmprego = null;
-$situaçãoEmprego = $esta_empregado == true ? 'Empregado' : 'Desempregado';
-
-//Ternário:
-//variável = condição ? valor_se_atender_condição : valor_se_não_atender_condição
-
-$total_para_aposentar = $sexo == 'M' ? IDADE_APOSENTADORIA_MASCULINA : IDADE_APOSENTADORIA_FEMININA;
-            
-            
-        
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +9,7 @@ $total_para_aposentar = $sexo == 'M' ? IDADE_APOSENTADORIA_MASCULINA : IDADE_APO
     <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explorando Variáveis em PHP</title>
+    <title>Ficha Cadastral-PHP</title>
 <style>
     body{
         display: flex;
