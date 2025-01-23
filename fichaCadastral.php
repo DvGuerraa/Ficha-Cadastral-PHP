@@ -51,10 +51,10 @@ require 'functions.php'
         <p>Nome: <strong> <?= $nome ?> </strong></p>
         <p>Idade: <strong><?= $idade ?></strong></p>
         <p>Sexo: <strong> <?= $sexo ?> </strong></p>
-        <p>Salário Mensal: <strong> R$<?= convertNumberToBRL($salário_mensa) ?> </strong></p>
+        <p>Salário Mensal: <strong> R$<?= convertNumberToBRL($salário_mensal) ?> </strong></p>
         <p>Salário Anual: <strong> R$<?= calcularSalarioAnual($salário_mensal) ?> </strong></p>
         <p>Status de Emprego: <strong> <?= $situaçãoEmprego?> </strong></p>
-        <p>Anos para Aaposentadoria: <strong> <?= $total_para_aposentar - $idade ?> </strong></p>
+        <p>Anos para Aaposentadoria: <strong> <?= calcularFaltanteParaAposentadoria($idade, $sexo) ?> </strong></p>
         <p>Habilidades: <strong><?=  implode(', ', $habilidades) ?></strong></p>
     </div>
     </div>

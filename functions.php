@@ -1,6 +1,5 @@
 <?php
 
-//calculo salário anual
 /**
  * Calcula o salário anual baseado no mensal
  * 
@@ -16,10 +15,21 @@ function calcularSalarioAnual(float $salarioMensal): string
     return convertNumbertoBRL($salarioAnual);
 }
 
-//anos para se aposentar
 
+/**
+ * Calcula a quantidade de anos que falta para alguem se aposentar
+ * 
+ * @param int $idade Idade da pessoa
+ * @param string $sexo Sexo da pessoa
+ * 
+ * @return int Quantidade de anos que falta para se aposentar
+ */
+function calcularFaltanteParaAposentadoria(int $idade, string $sexo): int 
+{
+    $total_para_aposentar = $sexo == 'M' ? IDADE_APOSENTADORIA_MASCULINA : IDADE_APOSENTADORIA_FEMININA;
+    return $total_para_aposentar - $idade;
+}
 
-//transfornmar um numero em valor monetario
 /**
  * Recebe um valor numerico e retorna um valor monetário
  * 
