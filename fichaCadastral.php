@@ -1,7 +1,7 @@
 <?php
 require 'constantes.php';
 include 'data.php';
-
+require 'functions.php'
 ?>
 
 <!DOCTYPE html>
@@ -51,8 +51,8 @@ include 'data.php';
         <p>Nome: <strong> <?= $nome ?> </strong></p>
         <p>Idade: <strong><?= $idade ?></strong></p>
         <p>Sexo: <strong> <?= $sexo ?> </strong></p>
-        <p>Salário Mensal: <strong> R$<?= number_format($salário_mensal, 2, ',', '.') ?> </strong></p>
-        <p>Salário Anual: <strong> R$<?= number_format($salário_mensal * 12, 2, ',', '.') ?> </strong></p>
+        <p>Salário Mensal: <strong> R$<?= convertNumberToBRL($salário_mensa) ?> </strong></p>
+        <p>Salário Anual: <strong> R$<?= calcularSalarioAnual($salário_mensal) ?> </strong></p>
         <p>Status de Emprego: <strong> <?= $situaçãoEmprego?> </strong></p>
         <p>Anos para Aaposentadoria: <strong> <?= $total_para_aposentar - $idade ?> </strong></p>
         <p>Habilidades: <strong><?=  implode(', ', $habilidades) ?></strong></p>
